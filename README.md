@@ -5,10 +5,8 @@ A project for the ITI course ML1
 
 This project implements a complete workflow for hand gesture recognition using hand landmark data extracted by MediaPipe from the HaGRID dataset. Each sample in the dataset contains 21 hand landmarks (with x, y, z coordinates) along with a corresponding gesture label. In our workflow, we drop the z coordinate, recenter and normalize the remaining features, and then train several classical machine learning models. The models are compared and the best is selected based on the **weighted F1 score**, which is particularly suited for imbalanced multi-class data.
 
-<video width="640" height="480" controls>
-  <source src="https://drive.google.com/file/d/1SakmyPTurVdVCT1fUeCFUF39hZww_tL3/view?usp=sharing" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the demo video](https://drive.google.com/file/d/1SakmyPTurVdVCT1fUeCFUF39hZww_tL3/view?usp=sharing)
+
 
 ## Project Overview
 
