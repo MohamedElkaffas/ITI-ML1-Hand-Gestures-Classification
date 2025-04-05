@@ -7,7 +7,11 @@ This project implements a complete workflow for hand gesture recognition using h
 
 [Watch the demo video](https://drive.google.com/file/d/1SakmyPTurVdVCT1fUeCFUF39hZww_tL3/view?usp=sharing)
 
+You can create a file named requirements.txt in your project directory with the above content. Then, to install all dependencies, run:
 
+bash
+Copy
+pip install -r requirements.txt
 ## Project Overview
 
 ### 1. Data Loading & Analysis
