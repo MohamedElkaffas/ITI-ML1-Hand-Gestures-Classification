@@ -72,7 +72,47 @@ Each model’s performance is evaluated using:
 For imbalanced multi-class data, **weighted F1 score** is the primary metric because it balances precision and recall while taking the class distribution into account.
 
 The best model—based on the highest weighted F1 score—is saved as `best_hand_gesture_model_dropZ_full.pkl`. A ranking table and learning curve are also generated for further analysis.
+This project evaluates several classical machine learning models for hand gesture recognition using hand landmark data. The dataset consists of 21 landmarks (with x, y, z coordinates) per sample, and we drop the z coordinate to work with 42 features (x and y only). The data is preprocessed by recentering (using the wrist) and normalizing (using the mid-finger tip).
 
+## Evaluation Overview
+
+The dataset was split into:
+- **Training:** 60%
+- **Validation:** 20%
+- **Test:** 20%
+
+Each model was tuned using GridSearchCV (with 5-fold cross-validation), and performance was evaluated on the test set. The primary performance metric for model selection is the **weighted F1 score**, which is ideal for imbalanced multi-class data because it balances precision and recall across classes.
+
+## Models Evaluated
+
+The following models were evaluated:
+- **Random Forest**
+- **SVM (Support Vector Machine)**
+- **Logistic Regression**
+- **Decision Tree**
+- **AdaBoost**
+- **XGBoost**
+- **K-Nearest Neighbors (KNN)**
+
+## Performance Summary
+
+The table below summarizes the performance of each model based on Test Accuracy, Validation Accuracy, CV Score, Weighted Precision, Weighted Recall, Weighted F1 score, and the best hyperparameters found.
+
+| Rank | Model                | Test Accuracy | Validation Accuracy | CV Score  | Weighted Precision | Weighted Recall | Weighted F1 | Best Hyperparameters                            |
+|------|----------------------|---------------|---------------------|-----------|--------------------|-----------------|-------------|-------------------------------------------------|
+| 1    | **SVM**              | 0.9829        | 0.9827              | 0.9835    | 0.9830             | 0.9829          | 0.9829      | {'C': 10, 'kernel': 'rbf'}                        |
+| 2    | **XGBoost**          | 0.9768        | 0.9799              | 0.9783    | 0.9769             | 0.9768          | 0.9768      | {'n_estimators': 200, 'max_depth': 5, 'learning_rate': 0.2} |
+| 3    | **Random Forest**    | 0.9708        | 0.9757              | 0.9738    | 0.9709             | 0.9708          | 0.9708      | {'max_depth': 20, 'n_estimators': 100}            |
+| 4    | **Decision Tree**    | 0.9373        | 0.9373              | 0.9363    | 0.9376             | 0.9373          | 0.9373      | {'max_depth': None/10/20, 'min_samples_split': 2} (varied) |
+| 5    | **Logistic Regression** | 0.9011     | 0.8972              | 0.8991    | 0.9018             | 0.9011          | 0.9011      | {'C': 10}                                        |
+| 6    | **AdaBoost**         | 0.4839        | 0.4816              | 0.5480    | 0.5276             | 0.4839          | 0.4252      | {'n_estimators': 200, 'learning_rate': 0.5}        |
+| 7    | **KNN**              | ...           | ...                 | ...       | ...                | ...             | ...         | (Tuning results for KNN if applicable)          |
+
+*Note: The values above are based on our experimental results. Your results may differ.*
+
+## Saved Model Files
+
+- `best_hand_gesture_model_dropZ_full.pkl`: The best-performing model based on weighted F1 score.
 ### 6. Real-Time Inference
 A separate Python script (`SCRPT.py`) performs real-time gesture recognition using:
 - **MediaPipe:** To extract hand landmarks from a live video feed.
