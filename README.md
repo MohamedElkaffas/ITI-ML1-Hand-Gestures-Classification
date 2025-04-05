@@ -106,7 +106,7 @@ The table below summarizes the performance of each model based on Test Accuracy,
 | 4    | **Decision Tree**    | 0.9373        | 0.9373              | 0.9363    | 0.9376             | 0.9373          | 0.9373      | {'max_depth': None/10/20, 'min_samples_split': 2} (varied) |
 | 5    | **Logistic Regression** | 0.9011     | 0.8972              | 0.8991    | 0.9018             | 0.9011          | 0.9011      | {'C': 10}                                        |
 | 6    | **AdaBoost**         | 0.4839        | 0.4816              | 0.5480    | 0.5276             | 0.4839          | 0.4252      | {'n_estimators': 200, 'learning_rate': 0.5}        |
-| 7    | **KNN**              | ...           | ...                 | ...       | ...                | ...             | ...         | (Tuning results for KNN if applicable)          |
+applicable)          |
 
 *Note: The values above are based on our experimental results. Your results may differ.*
 
