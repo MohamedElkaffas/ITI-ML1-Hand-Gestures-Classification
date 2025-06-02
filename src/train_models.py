@@ -42,8 +42,7 @@ def log_model_to_mlflow(model, model_name, X_sample, y_sample, params: dict, met
 
 def main():
     
-    CSV_PATH = os.path.join(os.path.dirname(__file__), "data", "hand_landmarks_data.csv")
-    df = pd.read_csv(CSV_PATH)
+    CSV_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "hand_landmarks_data.csv")    df = pd.read_csv(CSV_PATH)
     print(f"Loaded data: {df.shape}")
     
     X_raw = df.drop(columns=["label"])
@@ -55,7 +54,7 @@ def main():
     le = LabelEncoder()
     y_encoded = le.fit_transform(y_raw)
 
-    le_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "models", "label_encoder.pkl")
+    le_path = os.path.join(os.path.dirname(os.path.dirname(__file__)),"..", "models", "label_encoder.pkl")
     
     with open(le_path, "wb") as f_le:
         pickle.dump(le, f_le)
@@ -91,7 +90,7 @@ def main():
     
     log_model_to_mlflow(lr, "Baseline_LogReg", X_train, y_train, lr_params, metrics_A)
     
-    svm_pickle_path = os.path.join(os.path.dirname(__file__), "models", "best_hand_gesture.pkl")    
+    svm_pickle_path = os.path.join(os.path.dirname(__file__),"..", "models", "best_hand_gesture.pkl")    
     if os.path.exists(svm_pickle_path):
         print("Evaluating Loaded SVM...")
         with open(svm_pickle_path, "rb") as f_svm:
