@@ -144,7 +144,7 @@ def main():
     best_model = models[best_idx]
     best_name = model_names[best_idx]
     
-    best_model_path = os.path.join(os.path.dirname(__file__), "../models/best_hand_gesture.pkl")
+    best_model_path = os.path.join(os.path.dirname(__file__), "models/best_hand_gesture.pkl")
     with open(best_model_path, "wb") as f_best:
         pickle.dump(best_model, f_best)
     
@@ -165,8 +165,8 @@ def main():
     plt.grid(axis='y', alpha=0.3)
     plt.tight_layout()
     
-    os.makedirs(os.path.join(os.path.dirname(__file__), "../reports"), exist_ok=True)
-    chart_path = os.path.join(os.path.dirname(__file__), "../reports/model_comparison.png")
+    os.makedirs(os.path.join(os.path.dirname(__file__), "reports"), exist_ok=True)
+    chart_path = os.path.join(os.path.dirname(__file__), "reports/model_comparison.png")
     plt.savefig(chart_path, dpi=300, bbox_inches='tight')
     plt.close()
     
