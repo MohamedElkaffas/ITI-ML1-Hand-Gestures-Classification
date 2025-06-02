@@ -42,7 +42,8 @@ def log_model_to_mlflow(model, model_name, X_sample, y_sample, params: dict, met
 
 def main():
     
-    CSV_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "hand_landmarks_data.csv")    df = pd.read_csv(CSV_PATH)
+    CSV_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "hand_landmarks_data.csv")
+    df = pd.read_csv(CSV_PATH)
     print(f"Loaded data: {df.shape}")
     
     X_raw = df.drop(columns=["label"])
