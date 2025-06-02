@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/moham/handgestures-research/src/mlruns/706901248582202292/d51f8d04e22b4740ab5cb5de4b1328bd/artifacts
+end_time: 1748839496315
+entry_point_name: ''
+experiment_id: '706901248582202292'
+lifecycle_stage: active
+run_id: d51f8d04e22b4740ab5cb5de4b1328bd
+run_name: Improved_XGB
+run_uuid: d51f8d04e22b4740ab5cb5de4b1328bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748839490232
+status: 3
+tags: []
+user_id: moham

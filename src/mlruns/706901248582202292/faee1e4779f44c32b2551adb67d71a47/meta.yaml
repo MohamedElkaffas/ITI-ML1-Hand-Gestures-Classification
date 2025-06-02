@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/moham/handgestures-research/src/mlruns/706901248582202292/faee1e4779f44c32b2551adb67d71a47/artifacts
+end_time: 1748839362811
+entry_point_name: ''
+experiment_id: '706901248582202292'
+lifecycle_stage: active
+run_id: faee1e4779f44c32b2551adb67d71a47
+run_name: Baseline_LogReg
+run_uuid: faee1e4779f44c32b2551adb67d71a47
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748839354122
+status: 3
+tags: []
+user_id: moham

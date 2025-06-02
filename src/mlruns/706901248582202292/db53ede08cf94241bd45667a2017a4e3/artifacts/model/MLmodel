@@ -1,0 +1,62 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+metadata:
+  created_for: real_time_gesture_recognition
+  model_type: XGBClassifier
+  training_framework: scikit-learn
+  use_case: hand_gesture_maze_control
+mlflow_version: 2.22.0
+model_size_bytes: 2809275
+model_uuid: a7f48b951e5f4c60adb84d132a1eb92e
+prompts: null
+run_id: db53ede08cf94241bd45667a2017a4e3
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: values
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": 0, "required": true}, {"type": "double", "name":
+    1, "required": true}, {"type": "double", "name": 2, "required": true}, {"type":
+    "double", "name": 3, "required": true}, {"type": "double", "name": 4, "required":
+    true}, {"type": "double", "name": 5, "required": true}, {"type": "double", "name":
+    6, "required": true}, {"type": "double", "name": 7, "required": true}, {"type":
+    "double", "name": 8, "required": true}, {"type": "double", "name": 9, "required":
+    true}, {"type": "double", "name": 10, "required": true}, {"type": "double", "name":
+    11, "required": true}, {"type": "double", "name": 12, "required": true}, {"type":
+    "double", "name": 13, "required": true}, {"type": "double", "name": 14, "required":
+    true}, {"type": "double", "name": 15, "required": true}, {"type": "double", "name":
+    16, "required": true}, {"type": "double", "name": 17, "required": true}, {"type":
+    "double", "name": 18, "required": true}, {"type": "double", "name": 19, "required":
+    true}, {"type": "double", "name": 20, "required": true}, {"type": "double", "name":
+    21, "required": true}, {"type": "double", "name": 22, "required": true}, {"type":
+    "double", "name": 23, "required": true}, {"type": "double", "name": 24, "required":
+    true}, {"type": "double", "name": 25, "required": true}, {"type": "double", "name":
+    26, "required": true}, {"type": "double", "name": 27, "required": true}, {"type":
+    "double", "name": 28, "required": true}, {"type": "double", "name": 29, "required":
+    true}, {"type": "double", "name": 30, "required": true}, {"type": "double", "name":
+    31, "required": true}, {"type": "double", "name": 32, "required": true}, {"type":
+    "double", "name": 33, "required": true}, {"type": "double", "name": 34, "required":
+    true}, {"type": "double", "name": 35, "required": true}, {"type": "double", "name":
+    36, "required": true}, {"type": "double", "name": 37, "required": true}, {"type":
+    "double", "name": 38, "required": true}, {"type": "double", "name": 39, "required":
+    true}, {"type": "double", "name": 40, "required": true}, {"type": "double", "name":
+    41, "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-02 04:42:58.575106'

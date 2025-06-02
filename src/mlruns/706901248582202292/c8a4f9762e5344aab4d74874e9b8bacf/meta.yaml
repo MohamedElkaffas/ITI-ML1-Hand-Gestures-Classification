@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/moham/handgestures-research/src/mlruns/706901248582202292/c8a4f9762e5344aab4d74874e9b8bacf/artifacts
+end_time: 1748839487123
+entry_point_name: ''
+experiment_id: '706901248582202292'
+lifecycle_stage: active
+run_id: c8a4f9762e5344aab4d74874e9b8bacf
+run_name: Loaded_SVM
+run_uuid: c8a4f9762e5344aab4d74874e9b8bacf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748839479313
+status: 3
+tags: []
+user_id: moham
