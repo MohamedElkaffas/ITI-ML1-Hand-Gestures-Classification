@@ -94,7 +94,7 @@ def main():
     if os.path.exists(svm_pickle_path):
         print("Evaluating Loaded SVM...")
         with open(svm_pickle_path, "rb") as f_svm:
-            loaded_svm = pickle.load(f_svm)
+            loaded_svm = joblib.load(f_svm)
         
         y_val_pred_S = loaded_svm.predict(X_val)
         y_test_pred_S = loaded_svm.predict(X_test)
